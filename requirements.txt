@@ -1,0 +1,6 @@
+numpy
+matplotlib
+tqdm
+dlib
+face_recognition
+opencv-contrib-python
