@@ -5,7 +5,7 @@ Official implementation of [GANimation](http://www.albertpumarola.com/research/G
 
 ## Prerequisites
 - Install PyTorch, Torch Vision and dependencies from http://pytorch.org
-- Install requirements.txt (```pip install -r requirements.txt```)
+- Install requirements.txt (```python2 -m pip install -r requirements.txt```)
 
 ## Data Preparation
 The code requires a directory containing the following files:
@@ -18,7 +18,7 @@ An example of this directory is shown in `sample_dataset/`.
 
 To generate the `aus_openface.pkl` extract each image Action Units with [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Action-Units) and store each output in a csv file the same name as the image. Then run:
 ```
-python data/prepare_au_annotations.py
+python2 data/prepare_au_annotations.py
 ```
 
 ## Run
@@ -28,7 +28,7 @@ bash launch/run_train.sh
 ```
 To test:
 ```
-python test --input_path path/to/img
+python2 test --input_path path/to/img
 ```
 
 ## Citation
