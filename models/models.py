@@ -86,11 +86,11 @@ class BaseModel(object):
     def _load_optimizer(self, optimizer, optimizer_label, epoch_label):
         load_filename = 'opt_epoch_%s_id_%s.pth' % (epoch_label, optimizer_label)
         load_path = os.path.join(self._save_dir, load_filename)
-        if os.path.exists(load_path):
-            optimizer.load_state_dict(torch.load(load_path))
-            print 'loaded optimizer: %s' % load_path
-        else:
-            print 'NOT!! loaded optimizer: %s' % load_path
+        assert os.path.exists(
+            load_path), 'Weights file not found. Have you trained a model!? We are not providing one' % load_path
+
+        optimizer.load_state_dict(torch.load(load_path))
+        print 'loaded optimizer: %s' % load_path
 
     def _save_network(self, network, network_label, epoch_label):
         save_filename = 'net_epoch_%s_id_%s.pth' % (epoch_label, network_label)
@@ -101,11 +101,11 @@ class BaseModel(object):
     def _load_network(self, network, network_label, epoch_label):
         load_filename = 'net_epoch_%s_id_%s.pth' % (epoch_label, network_label)
         load_path = os.path.join(self._save_dir, load_filename)
-        if os.path.exists(load_path):
-            network.load_state_dict(torch.load(load_path))
-            print 'loaded net: %s' % load_path
-        else:
-            print 'NOT!! loaded net: %s' % load_path
+        assert os.path.exists(
+            load_path), 'Weights file not found. Have you trained a model!? We are not providing one' % load_path
+
+        network.load_state_dict(torch.load(load_path))
+        print 'loaded net: %s' % load_path
 
     def update_learning_rate(self):
         pass
