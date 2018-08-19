@@ -40,9 +40,9 @@ python test --input_path path/to/img
 If you use this code or ideas from the paper for your research, please cite our paper:
 ```
 @inproceedings{pumarola2018ganimation,
-title={{GANimation: Anatomically-aware Facial Animation from a Single Image}},
-author={A. Pumarola and A. Agudo and A.M. Martinez and A. Sanfeliu and F. Moreno-Noguer},
-booktitle={ECCV},
-year={2018}
+    title={GANimation: Anatomically-aware Facial Animation from a Single Image},
+    author={A. Pumarola and A. Agudo and A.M. Martinez and A. Sanfeliu and F. Moreno-Noguer},
+    booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+    year={2018}
 }
 ```
