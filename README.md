@@ -15,7 +15,7 @@ This code was made public to share our research for the benefit of the scientifi
 ## Data Preparation
 The code requires a directory containing the following files:
 - `imgs/`: folder with all image
-- `aus_openpose.pkl`: dictionary containing the images action units.
+- `aus_openface.pkl`: dictionary containing the images action units.
 - `train_ids.csv`: file containing the images names to be used to train.
 - `test_ids.csv`: file containing the images names to be used to test.
 
