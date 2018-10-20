@@ -9,7 +9,7 @@ This code was made public to share our research for the benefit of the scientifi
 ![GANimation](http://www.albertpumarola.com/images/2018/GANimation/teaser.png)
 
 ## Prerequisites
-- Install PyTorch, Torch Vision and dependencies from http://pytorch.org
+- Install PyTorch (version 0.3.1), Torch Vision and dependencies from http://pytorch.org
 - Install requirements.txt (```pip install -r requirements.txt```)
 
 ## Data Preparation
