@@ -43,10 +43,10 @@ class MorphFacesInTheWild:
 
         return morphed_face
 
-    def _morph_face(self, face, expresion):
+    def _morph_face(self, face, expression):
         face = torch.unsqueeze(self._transform(Image.fromarray(face)), 0)
-        expresion = torch.unsqueeze(torch.from_numpy(expresion/5.0), 0)
-        test_batch = {'real_img': face, 'real_cond': expresion, 'desired_cond': expresion, 'sample_id': torch.FloatTensor(), 'real_img_path': []}
+        expression = torch.unsqueeze(torch.from_numpy(expression/5.0), 0)
+        test_batch = {'real_img': face, 'real_cond': expression, 'desired_cond': expression, 'sample_id': torch.FloatTensor(), 'real_img_path': []}
         self._model.set_input(test_batch)
         imgs, _ = self._model.forward(keep_data_for_visuals=False, return_estimates=True)
         return imgs['concat']
