@@ -33,7 +33,7 @@ bash launch/run_train.sh
 ```
 To test:
 ```
-python test --input_path path/to/img
+python test.py --input_path path/to/img
 ```
 
 ## Citation

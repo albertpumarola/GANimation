@@ -17,7 +17,7 @@ class NetworksFactory:
         else:
             raise ValueError("Network %s not recognized." % network_name)
 
-        print "Network %s was created" % network_name
+        print("Network %s was created" % network_name)
 
         return network
 

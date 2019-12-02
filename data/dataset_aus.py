@@ -34,9 +34,9 @@ class AusDataset(DatasetBase):
             real_cond = self._get_cond_by_id(sample_id)
 
             if real_img is None:
-                print 'error reading image %s, skipping sample' % sample_id
+                print('error reading image %s, skipping sample' % sample_id)
             if real_cond is None:
-                print 'error reading aus %s, skipping sample' % sample_id
+                print('error reading aus %s, skipping sample' % sample_id)
 
         desired_cond = self._generate_random_cond()
 
@@ -92,11 +92,11 @@ class AusDataset(DatasetBase):
 
     def _read_ids(self, file_path):
         ids = np.loadtxt(file_path, delimiter='\t', dtype=np.str)
-        return [id[:-4] for id in ids]
+        return [str.encode(id[:-4]) for id in ids]
 
     def _read_conds(self, file_path):
         with open(file_path, 'rb') as f:
-            return pickle.load(f)
+            return pickle.load(f, encoding='bytes')
 
     def _get_cond_by_id(self, id):
         if id in self._conds:
